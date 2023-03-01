@@ -18,10 +18,15 @@ git apply ../JetbrainsRuntime-ChineseIMPositionFixed/fix-fcitx-window-position.p
 ``` shell
 sudo zypper install autoconf make zip gcc gcc-c++ libX11-devel libXext-devel libXrender-devel libXrandr-devel libXtst-devel libXt-devel libXi-devel cups-devel fontconfig-devel alsa-devel
 ```
+或者执行
+```shell
+bash configure
+```
+之后会告诉你有哪些缺少，安装即可
 
 ## 构建 OpenJDK
 ``` shell
-bash configure --with-boot-jdk=/opt/java/jdk-17.0.4.1
+bash configure //有多个版本需要手动写路径 格式：bash configure --with-boot-jdk=/opt/java/jdk-17.0.4.1
 make images
 ```
 
